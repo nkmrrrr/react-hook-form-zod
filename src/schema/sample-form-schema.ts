@@ -17,3 +17,5 @@ export const sampleFormSchema = z.object({
   selectedValue: castToValOrNull(z.string()),
   nullableSelectedValue: castToValOrNull(z.string().nullable()),
 });
+
+export type SampleFormSchema = z.infer<typeof sampleFormSchema>;
